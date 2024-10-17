@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 17:01:22 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:13:53 by mmisumi          ###   ########.fr       */
+/*   Created: 2024/10/16 21:29:35 by mmisumi           #+#    #+#             */
+/*   Updated: 2024/10/17 17:20:19 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-int	ft_isalpha(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
+	write(fd, "\n", 1);
 }
 
 // int	main(void)
 // {
-// 	int	c;
-// 	c = 'w';
-// 	printf("%d\n", ft_isalpha(c));
+// 	char	s[] = "chestit rozhden den";
+// 	int		fd = 1;
+// 	ft_putendl_fd(s, fd);
 // 	return (0);
 // }

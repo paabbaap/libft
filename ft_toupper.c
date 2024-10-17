@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:53:44 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:15:03 by mmisumi          ###   ########.fr       */
+/*   Created: 2024/10/12 19:05:36 by mmisumi           #+#    #+#             */
+/*   Updated: 2024/10/14 16:47:53 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+int	ft_toupper(int c)
 {
-	char	*q;
-
-	q = (char *)s;
-	while (n > 0)
-	{
-		*q = c;
-		q++;
-		n--;
-	}
-	return (s);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
 
-// int	main()
+// int	main(void)
 // {
-// 	char	s[] = "12345";
 // 	int	c;
-// 	c = 'a';
-// 	ft_memset(s, c, 2);
-// 	printf("%s\n", s);
+// 	int	b;
+// 	c = 3;
+// 	b = 3;
+// 	printf("%c\n", ft_toupper(c));
+// 	printf("%c\n", toupper(b));
 // 	return (0);
 // }

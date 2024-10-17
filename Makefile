@@ -1,14 +1,33 @@
+NAME := libft.a
+
+
+SRCDIR		:= .
+INCDIR		:= .
+OBJDIR		:= .obj
+
 CC = cc
 
-FLAGS = -Wextra -Werror -Wall
+CFLAGS = -I$(INCDIR) -Wall -Werror -Wextra
 
-SRCS = ft_atoi.c ft_bzero.c
+# SOURCES = ft_atoi.c \
+# 	   ft_bzero.c \
+# 	   ft_calloc.c \
 
-OBJS = 
+SOURCES		:= $(wildcard $(SRCDIR)/**/*.c) $(wildcard $(SRCDIR)/*.c)
+OBJECTS		:= $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SOURCES))
 
-all:
-	$(CC) -c $(SRCS) -o $(OBJS)
+
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
+	@mkdir -p $(dir $@)
+	@$(CC) -c $< -o $@ $(CFLAGS)
+
+$(NAME): $(OBJECTS)
+	@ar -r $(NAME) $(OBJECTS) >/dev/null 2>&1
+
+all: $(NAME)
 
 clean:
-	rm -r $(SRCS)
-	all
+
+fclean:
+
+re:

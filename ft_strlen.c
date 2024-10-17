@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:18:05 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:14:19 by mmisumi          ###   ########.fr       */
+/*   Created: 2024/10/08 13:43:56 by mmisumi           #+#    #+#             */
+/*   Updated: 2024/10/17 17:56:58 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-int	ft_isdigit(int c)
+size_t	ft_strlen(const char	*s)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	else
+	int	i;
+
+	i = 0;
+	if (s == NULL)
 		return (0);
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
 
 // int	main(void)
 // {
-// 	int	c;
-// 	c = 47;
-// 	printf("%d\n", ft_isdigit(c));
+// 	// char	str[] = "bon\n jour";
+// 	char *str = NULL;
+// 	printf("%zu\n", ft_strlen(str));
 // 	return (0);
 // }

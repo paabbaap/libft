@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:43:56 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:30:51 by mmisumi          ###   ########.fr       */
+/*   Created: 2024/10/12 19:34:07 by mmisumi           #+#    #+#             */
+/*   Updated: 2024/10/12 19:40:51 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char	*s)
+int	ft_tolower(int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }
 
 // int	main(void)
 // {
-// 	char	str[] = "bon\n jour";
-// 	printf("%zu\n", ft_strlen(str));
+// 	int	a = 'A';
+// 	int	b = 'A';
+// 	printf("%c\n", ft_tolower(a));
+// 	printf("%c\n", tolower(b));
 // 	return (0);
 // }

@@ -6,17 +6,17 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:43:31 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:15:08 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/14 14:33:29 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	i;
-	int	d;
-	int	s;
+	size_t	i;
+	size_t	d;
+	size_t	s;
 
 	d = 0;
 	s = 0;
@@ -37,15 +37,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i] = '\0';
 	return (d + s);
 }
-int	main(void)
-{
-	char	dest[] = "kom";
-	char	src[] = "mertje";
-	size_t n = 7;
-	printf("ft_strlcat: %zu\n", ft_strlcat(dest, src, n));
-	printf("dest: %s\n", dest);
-	char	destt[] = "kom";
-	char	srcc[] = "mertje";
-	printf("strlcat: %zu\n", strlcat(destt, srcc, n));
-	printf("destt: %s\n", destt);
-}
+// int	main(void)
+// {
+// 	char	dest[] = "";
+// 	char	src[] = "mertje";
+// 	size_t n = 2;
+// 	printf("ft_strlcat: %zu\n", ft_strlcat(dest, src, n));
+// 	printf("dest: %s\n", dest);
+// 	char	destt[] = "";
+// 	char	srcc[] = "mertje";
+// 	printf("strlcat: %zu\n", strlcat(destt, srcc, n));
+// 	printf("destt: %s\n", destt);
+// }

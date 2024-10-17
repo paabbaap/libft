@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 17:38:41 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:13:23 by mmisumi          ###   ########.fr       */
+/*   Created: 2024/10/16 21:21:30 by mmisumi           #+#    #+#             */
+/*   Updated: 2024/10/16 21:30:46 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	char	*q;
-
-	q = (char *)s;
-	while (n > 0)
+	while (*s)
 	{
-		*q = '\0';
-		q++;
-		n--;
+		write(fd, s, 1);
+		s++;
 	}
-	return (s);
 }
 
 // int	main(void)
 // {
-// 	char	s[] = "12345";
-// 	int	n;
-// 	n = 4;	
-// 	printf("%d\n", ft_bzero(s, n));
+// 	char	s[] = "chestit rozhden den";
+// 	int		fd = 1;
+// 	ft_putstr_fd(s, fd);
 // 	return (0);
 // }

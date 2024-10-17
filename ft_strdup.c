@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 18:06:24 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:14:46 by mmisumi          ###   ########.fr       */
+/*   Created: 2024/10/16 20:18:09 by mmisumi           #+#    #+#             */
+/*   Updated: 2024/10/17 15:30:02 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strdup(const char *s)
 {
-	char	*q;
-	char	*s;
+	char	*ptr;
+	int		len;
+	int		i;
 
-	q = (char *) dest;
-	s = (char *) src;
-	while (n > 0)
-	{
-		*q = *s;
-		q++;
-		s++;
-		n--;
-	}
-	return (dest);
+	i = 0;
+	len = ft_strlen(s);
+	ptr = malloc(len * sizeof(char) + 1);
+	if (ptr == 	NULL)
+		return (NULL);
+	ft_strlcpy(ptr, s, len + 1);
+	return (ptr);
+	 
 }
+
 
 // int	main(void)
 // {
-// 	char	dest[] = "bonjour";
-// 	char	src[] = "yo";
-// 	size_t n;
-// 	n = 2;
-// 	ft_memcpy(dest, src, n);
-// 	printf("%s\n", dest);
+// 	char	s[14] = "mnogotizdrave";
+// 	char	*ptr = ft_strdup(s);
+// 	printf("%s\n", ptr);
+// 	free(ptr);
 // 	return (0);
 // }

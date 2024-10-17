@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 13:28:46 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:14:05 by mmisumi          ###   ########.fr       */
+/*   Created: 2024/10/08 14:44:23 by mmisumi           #+#    #+#             */
+/*   Updated: 2024/10/17 16:19:24 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-int	ft_isascii(int c)
+int	ft_atoi(const char	*nptr)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
-}
+	int	i;
+	int	result;
+	int	sign;
 
-// int	main(void)
-// {
-// 	int	c;
-// 	c = 133;
-// 	printf("%d\n", ft_isascii(c));
-// 	return (0);
-// }
+	i = 0;
+	result = 0;
+	sign = 1;
+	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			sign = -1;
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		result = result * 10 + (nptr[i] - 48);
+		i++;
+	}
+	return (result * sign);
+}

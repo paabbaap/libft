@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 14:44:23 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:18:43 by mmisumi          ###   ########.fr       */
+/*   Created: 2024/10/08 13:53:44 by mmisumi           #+#    #+#             */
+/*   Updated: 2024/10/17 15:51:27 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char	*nptr)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	int	i;
-	int	result;
-	int	sign;
+	char	*q;
 
-	i = 0;
-	result = 0;
-	sign = 1;
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
-		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	q = (char *)s;
+	while (n > 0)
 	{
-		if (nptr[i] == '-')
-			sign = -1;
-		i++;
+		*q = c;
+		q++;
+		n--;
 	}
-	while (nptr[i] >= '0' && nptr[i] <= '9')
-	{
-		result = result * 10 + (nptr[i] - 48);
-		i++;
-	}
-	return (result * sign);
+	return (s);
 }
 
 // int	main(void)
 // {
-// 	const char	str[] = " -112 345";
-// 	printf("%d\n", ft_atoi(str));
+// 	char	s[] = "12345";
+// 	int	c;
+// 	c = 'a';
+// 	// ft_memset(s, c, 2);
+// 	printf("%s\n", (char *)ft_memset(s, c, 0));
 // 	return (0);
 // }
