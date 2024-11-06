@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:28:46 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:14:05 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:48:00 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-// int	main(void)
-// {
-// 	int	c;
-// 	c = 133;
-// 	printf("%d\n", ft_isascii(c));
-// 	return (0);
-// }

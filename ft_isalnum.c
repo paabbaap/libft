@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:19:09 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:13:43 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:47:30 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-// int	main(void)
-// {
-// 	int	c;
-// 	c = 'a';
-// 	printf("%d\n", ft_isalnum(c));
-// 	return (0);
-// }

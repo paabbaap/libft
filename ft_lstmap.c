@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 15:33:28 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/24 13:23:52 by mmisumi          ###   ########.fr       */
+/*   Created: 2024/10/29 14:34:14 by mmisumi           #+#    #+#             */
+/*   Updated: 2024/10/29 16:04:07 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		i;
-	int		size;
-	char	*newstring;
+	t_list	*newlst;
+	t_list	*new_node;
+	void	*content;
 
-	size = ft_strlen(s1) + ft_strlen(s2);
-	newstring = malloc((size + 1) * sizeof(char));
-	if (newstring == NULL)
+	newlst = NULL;
+	if (!f || !lst)
 		return (NULL);
-	i = 0;
-	while (*s1)
+	while (lst)
 	{
-		newstring[i] = *s1;
-		i++;
-		s1++;
+		content = f(lst->content);
+		new_node = ft_lstnew(content);
+		if (!new_node)
+		{
+			if (content)
+			{
+				del(content);
+			}
+			ft_lstclear(&newlst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newlst, new_node);
+		lst = lst->next;
 	}
-	while (*s2)
-	{
-		newstring[i] = *s2;
-		s2++;
-		i++;
-	}
-	newstring[i] = '\0';
-	return (newstring);
+	return (newlst);
 }

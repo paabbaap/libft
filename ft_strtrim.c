@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/17 15:33:28 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/24 13:23:52 by mmisumi          ###   ########.fr       */
+/*   Created: 2024/10/21 17:37:31 by mmisumi           #+#    #+#             */
+/*   Updated: 2024/10/22 19:43:41 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		size;
-	char	*newstring;
+	int		beg;
+	int		end;
+	char	*trimstr;
 
-	size = ft_strlen(s1) + ft_strlen(s2);
-	newstring = malloc((size + 1) * sizeof(char));
-	if (newstring == NULL)
-		return (NULL);
-	i = 0;
-	while (*s1)
-	{
-		newstring[i] = *s1;
-		i++;
-		s1++;
-	}
-	while (*s2)
-	{
-		newstring[i] = *s2;
-		s2++;
-		i++;
-	}
-	newstring[i] = '\0';
-	return (newstring);
+	beg = 0;
+	end = ft_strlen(s1);
+	while (ft_strchr(set, s1[beg]) != NULL)
+		beg++;
+	while (ft_strrchr(set, s1[end]) != NULL)
+		end--;
+	trimstr = ft_substr(s1, beg, end + 1 - beg);
+	return (trimstr);
 }

@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:42:03 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:14:31 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:48:40 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-// int	main(void)
-// {
-// 	int	c;
-// 	c = 12;
-// 	printf("%d\n", ft_isprint(c));
-// 	return (0);
-// }

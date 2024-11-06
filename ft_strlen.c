@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:43:56 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/17 17:56:58 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/11/06 19:18:48 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,10 @@
 
 size_t	ft_strlen(const char	*s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (s == NULL)
-		return (0);
 	while (s[i] != '\0')
 		i++;
 	return (i);
 }
-
-// int	main(void)
-// {
-// 	// char	str[] = "bon\n jour";
-// 	char *str = NULL;
-// 	printf("%zu\n", ft_strlen(str));
-// 	return (0);
-// }

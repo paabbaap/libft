@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:31:49 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/17 17:18:16 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/24 13:23:26 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
+
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
@@ -30,11 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 	c = n % 10 + '0';
 	write(fd, &c, 1);
 }
-
-// int	main(void)
-// {
-// 	int	n = 4242;
-// 	int	fd = 1;
-// 	ft_putnbr_fd(n, fd);
-// 	return (0);
-// }

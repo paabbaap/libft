@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 19:05:36 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/14 16:47:53 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/21 18:02:42 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-// int	main(void)
-// {
-// 	int	c;
-// 	int	b;
-// 	c = 3;
-// 	b = 3;
-// 	printf("%c\n", ft_toupper(c));
-// 	printf("%c\n", toupper(b));
-// 	return (0);
-// }

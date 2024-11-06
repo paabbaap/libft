@@ -6,22 +6,21 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:02:43 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/17 16:48:09 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/11/06 19:17:34 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
+	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (unsigned char)c)
 		{
 			s = &s[i];
 			return ((char *)s);
@@ -30,11 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	const char	*s =  "12345";
-// 	int c = '\0';
-// 	printf("%s\n", ft_strrchr(s, c));
-// 	return (0);
-// }

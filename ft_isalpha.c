@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:01:22 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:13:53 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/21 17:47:46 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-// int	main(void)
-// {
-// 	int	c;
-// 	c = 'w';
-// 	printf("%d\n", ft_isalpha(c));
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 21:21:30 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/16 21:30:46 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/11/06 19:23:55 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	while (*s)
-	{
-		write(fd, s, 1);
-		s++;
-	}
+		write(fd, s, ft_strlen(s));
 }
-
-// int	main(void)
-// {
-// 	char	s[] = "chestit rozhden den";
-// 	int		fd = 1;
-// 	ft_putstr_fd(s, fd);
-// 	return (0);
-// }

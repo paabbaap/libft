@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 19:27:55 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/14 15:22:58 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/23 16:28:07 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	char	*q;
 	char	*s;
 
+	if (dest == 0 && src == 0)
+		return (NULL);
 	q = (char *) dest;
 	s = (char *) src;
 	while (n > 0)
@@ -36,13 +38,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char	dest[] = "12345";
-// 	char	src[] = "23";
-// 	size_t	n = 2;
-// 	ft_memmove(dest, src, n);
-// 	printf("%s\n", dest);
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 14:43:31 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/14 14:33:29 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/21 18:00:57 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[i] = '\0';
 	return (d + s);
 }
-// int	main(void)
-// {
-// 	char	dest[] = "";
-// 	char	src[] = "mertje";
-// 	size_t n = 2;
-// 	printf("ft_strlcat: %zu\n", ft_strlcat(dest, src, n));
-// 	printf("dest: %s\n", dest);
-// 	char	destt[] = "";
-// 	char	srcc[] = "mertje";
-// 	printf("strlcat: %zu\n", strlcat(destt, srcc, n));
-// 	printf("destt: %s\n", destt);
-// }

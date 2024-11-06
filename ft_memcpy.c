@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 18:06:24 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:14:46 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/23 16:16:05 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*q;
 	char	*s;
 
+	if (dest == 0 && src == 0)
+		return (NULL);
 	q = (char *) dest;
 	s = (char *) src;
 	while (n > 0)
@@ -28,14 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char	dest[] = "bonjour";
-// 	char	src[] = "yo";
-// 	size_t n;
-// 	n = 2;
-// 	ft_memcpy(dest, src, n);
-// 	printf("%s\n", dest);
-// 	return (0);
-// }

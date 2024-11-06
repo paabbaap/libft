@@ -6,7 +6,7 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 13:18:05 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/10/11 14:14:19 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/10/21 18:08:41 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,3 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
-
-// int	main(void)
-// {
-// 	int	c;
-// 	c = 47;
-// 	printf("%d\n", ft_isdigit(c));
-// 	return (0);
-// }
