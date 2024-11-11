@@ -6,12 +6,11 @@
 /*   By: mmisumi <mmisumi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:02:43 by mmisumi           #+#    #+#             */
-/*   Updated: 2024/11/06 19:17:34 by mmisumi          ###   ########.fr       */
+/*   Updated: 2024/11/11 16:02:23 by mmisumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 char	*ft_strrchr(const char *s, int c)
 {
